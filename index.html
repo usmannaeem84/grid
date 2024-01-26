@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-areas: "nav nav nav nav"
+                "article main main main"
+                "article box1 box2 box3"
+                "article footer footer footer";
+        }
+
+        .common {
+            margin: 4px;
+        }
+
+        .item1 {
+            grid-area: nav;
+            height: 55px;
+            background-color: rgb(157, 235, 222);
+        }
+
+        .item2 {
+            grid-area: article;
+            background-color: aqua;
+            height: 855px;
+        }
+
+        .item3 {
+            grid-area: main;
+            background-color: rgb(119, 235, 255);
+
+        }
+
+        .item4 {
+            grid-area: box1;
+            background-color: rgb(152, 248, 162);
+        }
+
+        .item5 {
+            grid-area: box2;
+            background-color: rgb(70, 222, 184);
+        }
+
+        .item6 {
+            grid-area: box3;
+            background-color: rgb(113, 236, 172);
+        }
+
+        .item7 {
+            grid-area: footer;
+            background-color: rgb(78, 151, 135);
+        }
+
+        @media (max-width:450px) {
+
+            .container {
+                grid-template-areas: "nav"
+                    "article "
+                    "main"
+                    "box1"
+                    "box2"
+                    "box3"
+                    "footer";
+            }
+
+            .item2 {
+                grid-area: article;
+                background-color: aqua;
+                height: 55px;
+            }
+
+            .item3 {
+                grid-area: main;
+                height: 240px;
+
+            }
+
+            .item {
+                height: 90px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="item1 common">navbar</div>
+        <div class="item2 common">article</div>
+        <div class="item3 common">main</div>
+        <div class="item item4 common">box1</div>
+        <div class="item item5 common">box2</div>
+        <div class="item item6 common">box3</div>
+        <div class="item item7 common">footer</div>
+    </div>
+</body>
+
+</html>
